@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Cards from './components/cards/index.jsx';
 function App() {

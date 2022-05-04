@@ -1,6 +1,6 @@
 import React from "react";
-import './reset.css'
-import './style.css'
+import reset from './reset.module.css'
+import styles from "./styles.module.css"
 
 
 class Cards extends React.Component {
@@ -25,16 +25,15 @@ class Cards extends React.Component {
     }=this.props;
     const { isLoading } = this.state;
     const element = (
-      <main className="container">
-      <ul id="root" className="userCardsContainer">
-      <li className="userCardWrapper">
-        <article className="cardContainer">
-          <div className="cardImgWrapper">
-            <img className="cardImg" src={profilePicture} alt={`${firstName} ${lastName}`} onError={this.Img} />
-            {isLoading && <div className="initials"> undefined</div>}
+      
+      <li className={styles.userCardWrapper}>
+        <article className={styles.cardContainer}>
+          <div className={styles.cardImgWrapper}>
+            <img className={styles.cardImg} src={profilePicture} alt={`${firstName} ${lastName}`} onError={this.Img} />
+            {isLoading && <div className={styles.initials}> undefined</div>}
           </div>
-          <h2 className="cardName">{firstName} {lastName}</h2>
-          <p className="cardDescription">
+          <h2 className={styles.cardName}>{firstName} {lastName}</h2>
+          <p className={styles.cardDescription}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
             numquam quod odit labore facilis temporibus amet, dicta saepe
             eveniet, maiores ab assumenda accusantium provident beatae
@@ -42,8 +41,6 @@ class Cards extends React.Component {
           </p>
         </article>
       </li>
-      </ul>
-      </main>
     );
     return element
   }

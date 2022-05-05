@@ -85,7 +85,7 @@ function App() {
     },
   ];
   const cardUser = responseData.map(
-    ({ id, firstName, lastName, profilePicture, contacts }) => (
+    ({ id, firstName, lastName, profilePicture, contacts }) => (<li key={id} className={styles.userCardWrapper}>
       <Cards
         key={id}
         firstName={firstName}
@@ -93,6 +93,7 @@ function App() {
         profilePicture={profilePicture}
         contacts={contacts}
       />
+      </li>
     )
   );
   return (
